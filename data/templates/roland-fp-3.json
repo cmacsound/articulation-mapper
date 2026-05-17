@@ -1,0 +1,216 @@
+{
+  "manufacturer": "Roland",
+  "model": "FP-3",
+  "author": "cmacsound",
+  "banks": [
+    {
+      "name": "FP-3",
+      "cc0": null,
+      "cc32": null,
+      "patches": [
+        {
+          "number": "01",
+          "name": "Grand Piano 1",
+          "program_change": 0
+        },
+        {
+          "number": "02",
+          "name": "Grand Piano 2",
+          "program_change": 1
+        },
+        {
+          "number": "03",
+          "name": "Rock Piano",
+          "program_change": 2
+        },
+        {
+          "number": "04",
+          "name": "Honky-Tonk",
+          "program_change": 3
+        },
+        {
+          "number": "05",
+          "name": "Upright Piano",
+          "program_change": 4
+        },
+        {
+          "number": "06",
+          "name": "Harpsichord",
+          "program_change": 5
+        },
+        {
+          "number": "07",
+          "name": "Stage Rhodes",
+          "program_change": 6
+        },
+        {
+          "number": "08",
+          "name": "Dyno Rhodes",
+          "program_change": 7
+        },
+        {
+          "number": "09",
+          "name": "E. Piano",
+          "program_change": 8
+        },
+        {
+          "number": "10",
+          "name": "Suitcase",
+          "program_change": 9
+        },
+        {
+          "number": "11",
+          "name": "Wurlitzer",
+          "program_change": 10
+        },
+        {
+          "number": "12",
+          "name": "Clavinet",
+          "program_change": 11
+        },
+        {
+          "number": "13",
+          "name": "Vibraphone",
+          "program_change": 12
+        },
+        {
+          "number": "14",
+          "name": "Vibra Bell",
+          "program_change": 13
+        },
+        {
+          "number": "15",
+          "name": "Jazz Organ",
+          "program_change": 14
+        },
+        {
+          "number": "16",
+          "name": "Rock Organ",
+          "program_change": 15
+        },
+        {
+          "number": "17",
+          "name": "Full Organ",
+          "program_change": 16
+        },
+        {
+          "number": "18",
+          "name": "Lower Organ",
+          "program_change": 17
+        },
+        {
+          "number": "19",
+          "name": "Church Organ",
+          "program_change": 18
+        },
+        {
+          "number": "20",
+          "name": "Nason Flute 8'",
+          "program_change": 19
+        },
+        {
+          "number": "21",
+          "name": "Acoustic Guitar",
+          "program_change": 20
+        },
+        {
+          "number": "22",
+          "name": "Jazz Guitar",
+          "program_change": 21
+        },
+        {
+          "number": "23",
+          "name": "Acoustic Bass",
+          "program_change": 22
+        },
+        {
+          "number": "24",
+          "name": "Acoustic Bass + Cymbal",
+          "program_change": 23
+        },
+        {
+          "number": "25",
+          "name": "Fingered Bass",
+          "program_change": 24
+        },
+        {
+          "number": "26",
+          "name": "Thum Voice",
+          "program_change": 25
+        },
+        {
+          "number": "27",
+          "name": "Slow Strings",
+          "program_change": 26
+        },
+        {
+          "number": "28",
+          "name": "Strings",
+          "program_change": 27
+        },
+        {
+          "number": "29",
+          "name": "Warm JP Strings",
+          "program_change": 28
+        },
+        {
+          "number": "30",
+          "name": "Holy Voice",
+          "program_change": 29
+        },
+        {
+          "number": "31",
+          "name": "Sugar Key",
+          "program_change": 30
+        },
+        {
+          "number": "32",
+          "name": "Harp",
+          "program_change": 31
+        },
+        {
+          "number": "33",
+          "name": "Jazz Scat",
+          "program_change": 32
+        },
+        {
+          "number": "34",
+          "name": "Rich Choir",
+          "program_change": 33
+        },
+        {
+          "number": "35",
+          "name": "Dreamy Choir",
+          "program_change": 34
+        },
+        {
+          "number": "36",
+          "name": "Alto Sax",
+          "program_change": 35
+        },
+        {
+          "number": "37",
+          "name": "Flute",
+          "program_change": 36
+        },
+        {
+          "number": "38",
+          "name": "Trumpet",
+          "program_change": 37
+        },
+        {
+          "number": "39",
+          "name": "Pop Drum Set",
+          "program_change": 38
+        },
+        {
+          "number": "40",
+          "name": "Vox Drum Set",
+          "program_change": 39
+        }
+      ]
+    }
+  ],
+  "name": "Roland FP-3",
+  "description": "Patch list for the Roland FP-3 stage piano."
+}

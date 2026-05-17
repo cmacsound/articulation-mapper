@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulation Mapper</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Articulation Mapper</h1>
+        <div class="header-actions">
+            <button id="btn-new" title="New project">New</button>
+            <button id="btn-open" title="Open project">Open</button>
+            <button id="btn-save" title="Save project">Save</button>
+            <span class="separator">|</span>
+            <button id="btn-import-midnam" title="Import .midnam file">Import Midnam</button>
+            <button id="btn-import-text" title="Import text list">Import Text</button>
+            <span class="separator">|</span>
+            <button id="btn-preview" title="Preview XML output">Preview XML</button>
+            <button id="btn-export" class="primary" title="Export .midnam + .middev files">Export</button>
+            <button id="btn-install" class="accent" title="Install to Pro Tools">Install to PT</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Device Setup Panel -->
+        <section id="device-panel">
+            <div class="field-row">
+                <label for="manufacturer">Manufacturer</label>
+                <input type="text" id="manufacturer" placeholder="e.g. Spitfire, UACC, EastWest">
+            </div>
+            <div class="field-row">
+                <label for="model">Model</label>
+                <input type="text" id="model" placeholder="e.g. BBC Strings, Articulations">
+            </div>
+            <div class="field-row">
+                <label for="author">Author</label>
+                <input type="text" id="author" value="Articulation Mapper">
+            </div>
+            <div class="field-row template-row">
+                <label>Template</label>
+                <select id="template-select">
+                    <option value="">-- Load a template --</option>
+                </select>
+                <button id="btn-load-template" class="small">Load</button>
+            </div>
+        </section>
+
+        <!-- Bank/Articulation Table -->
+        <section id="bank-panel">
+            <div class="bank-toolbar">
+                <button id="btn-add-bank" title="Add articulation">+ Add</button>
+                <button id="btn-add-bulk" title="Add multiple from text">+ Bulk Add</button>
+                <button id="btn-delete-selected" title="Delete selected rows">- Delete</button>
+                <button id="btn-duplicate" title="Duplicate selected row">Duplicate</button>
+                <span class="bank-count"></span>
+                <div class="search-box">
+                    <input type="text" id="bank-search" placeholder="Filter...">
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="bank-table">
+                    <thead>
+                        <tr>
+                            <th class="col-check"><input type="checkbox" id="select-all"></th>
+                            <th class="col-name">Articulation Name</th>
+                            <th class="col-cc0">CC0 (MSB)</th>
+                            <th class="col-cc32">CC32 (LSB)</th>
+                            <th class="col-pc">Prog Change</th>
+                            <th class="col-actions"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="bank-tbody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="empty-state" id="empty-state">
+                <p>No articulations yet.</p>
+                <p>Click <strong>+ Add</strong> to create one, <strong>Import</strong> a midnam file, or load a
+                    <strong>Template</strong>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay">
+        <!-- Preview Modal -->
+        <div class="modal" id="modal-preview">
+            <div class="modal-header">
+                <h2>XML Preview</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-tabs">
+                    <button class="tab active" data-tab="midnam">Midnam</button>
+                    <button class="tab" data-tab="middev">Middev</button>
+                </div>
+                <pre id="preview-content" class="preview-content"></pre>
+            </div>
+        </div>
+
+        <!-- Open Project Modal -->
+        <div class="modal" id="modal-open">
+            <div class="modal-header">
+                <h2>Open Project</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="project-list" class="project-list"></div>
+            </div>
+        </div>
+
+        <!-- Import Text Modal -->
+        <div class="modal" id="modal-import-text">
+            <div class="modal-header">
+                <h2>Import Text List</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">Paste articulation names, one per line:</p>
+                <textarea id="import-text-area" rows="12"
+                    placeholder="legato&#10;staccato&#10;spiccato&#10;tremolo&#10;pizzicato"></textarea>
+                <div class="import-options">
+                    <div class="field-row">
+                        <label for="import-start-cc32">Starting CC32</label>
+                        <input type="number" id="import-start-cc32" value="1" min="0" max="127">
+                    </div>
+                    <div class="field-row">
+                        <label>
+                            <input type="checkbox" id="import-replace"> Replace existing banks
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close">Cancel</button>
+                    <button id="btn-do-import-text" class="primary">Import</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Import Midnam Modal -->
+        <div class="modal" id="modal-import-midnam">
+            <div class="modal-header">
+                <h2>Import Midnam File</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="file" id="midnam-file-input" accept=".midnam,.xml">
+                <div class="modal-actions">
+                    <button class="modal-close">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bulk Add Modal -->
+        <div class="modal" id="modal-bulk-add">
+            <div class="modal-header">
+                <h2>Bulk Add Articulations</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">Enter names, one per line. CC32 and program change will auto-increment.</p>
+                <textarea id="bulk-add-area" rows="10"
+                    placeholder="lng sustain&#10;lng tremolo&#10;shrt spiccato"></textarea>
+                <div class="import-options">
+                    <div class="field-row">
+                        <label for="bulk-start-cc32">Starting CC32</label>
+                        <input type="number" id="bulk-start-cc32" value="1" min="0" max="127">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close">Cancel</button>
+                    <button id="btn-do-bulk-add" class="primary">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Install Result Modal -->
+        <div class="modal" id="modal-install-result">
+            <div class="modal-header">
+                <h2>Install Result</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="install-result-content"></div>
+                <div class="modal-actions">
+                    <button class="modal-close primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toast-container"></div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

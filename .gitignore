@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+
+# User data and generated files
+data/projects/*
+!data/projects/.gitkeep
+data/*.midnam
+data/*.middev
+
+# Environment
+.env
+.env.local

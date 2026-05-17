@@ -1,0 +1,115 @@
+# Articulation Mapper
+
+A small, local web tool for naming MIDI patches in Pro Tools. Build `.midnam` files for hardware synths, sound modules, virtual instruments, and articulation banks, so program changes appear by name in the patch selector instead of as raw numbers. A modern alternative to CherryPicker.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+
+## Why this exists
+
+Pro Tools reads patch and program names from `.midnam` (MIDI Name Document) files. With one in place, you stop typing cryptic program numbers and start picking patches by name from a drop-down on the MIDI track.
+
+That works for any device that responds to MIDI program changes: a Roland stage piano, a Korg synth, a Kontakt instrument, a sample library articulation set. The same file format covers all of them.
+
+Hand-writing midnam XML is tedious. Existing tools like CherryPicker are aging and macOS-only. This tool keeps the workflow simple: a clean editor in the browser, sane defaults, sensible templates, and one-click install to the right system folder.
+
+## Who this is for
+
+- Composers and sound designers who want articulation banks named instead of numbered.
+- Anyone routing MIDI to a hardware synth, sound module, or stage instrument and tired of guessing which program is which.
+- Engineers who need to share a patch list with a session collaborator without exporting a screenshot of the manual.
+
+## Quick start
+
+Requires Python 3.9 or newer.
+
+```bash
+git clone https://github.com/cmacsound/articulation-mapper.git
+cd articulation-mapper
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+Open <http://127.0.0.1:5000> in your browser.
+
+## What it does
+
+- Generates `.midnam` files that Pro Tools reads as patch and program name lists
+- Generates companion `.middev` files that register your device (hardware or virtual) as a MIDI device
+- Maps patch and articulation names to CC0/CC32 (bank select MSB/LSB) and program change values
+- One-click install to `/Library/Audio/MIDI Patch Names/` for Pro Tools (macOS only)
+
+## Features
+
+**Device setup.** Set Manufacturer, Model, and Author. These become the identity of your midnam file.
+
+**Patch table.** Inline editing of name, CC0 (MSB), CC32 (LSB), and program change. Add single rows or bulk-add from a text list. Delete, duplicate, drag-to-reorder. Filter and search across all entries. Works equally well for hardware patch lists and sample-library articulation banks.
+
+**Templates.** Built-in templates ship with the tool: Roland FP-3, Roland FP-3 Perc, and UACC Standard Articulations (101 articulations). Select from the Template dropdown and click Load, then edit the manufacturer, model, and entries to match your device. See [examples/](examples/) for the raw `.midnam` and `.middev` versions.
+
+**Import.** Open any existing `.midnam` file and edit it. Or paste a list of patch names, one per line, and the tool auto-numbers them.
+
+**Export and install.** Download `.midnam` and `.middev` files, preview the XML before exporting, or write directly to the Pro Tools system folder.
+
+**Project files.** Save and load projects as JSON. Stored locally in `data/projects/`.
+
+## File structure
+
+```
+articulation-mapper/
+├── app.py                          # Flask server
+├── requirements.txt                # Python dependencies
+├── lib/
+│   ├── midnam.py                   # Midnam XML generation and parsing
+│   └── middev.py                   # Middev XML generation and parsing
+├── templates/
+│   └── index.html                  # Web UI
+├── static/
+│   ├── css/style.css               # Styling
+│   └── js/app.js                   # Client-side logic
+├── data/
+│   ├── templates/                  # Built-in templates
+│   │   ├── uacc-standard.json
+│   │   ├── roland-fp-3.json
+│   │   └── roland-fp-3-perc.json
+│   └── projects/                   # Saved user projects (gitignored)
+└── examples/                       # Reference .midnam and .middev files
+```
+
+## Pro Tools integration
+
+After exporting or installing, restart Pro Tools. Your patch names will appear in the MIDI track's program/patch selector under the manufacturer and model you specified.
+
+The install path on macOS is:
+
+```
+/Library/Audio/MIDI Patch Names/[Manufacturer]/[Manufacturer] [Model].midnam
+/Library/Audio/MIDI Patch Names/[Manufacturer]/[Manufacturer].middev
+```
+
+Writing to `/Library` requires permission. If install fails with a permission error, either grant your user write access to that folder or run the export and copy the files manually.
+
+## Keyboard shortcuts
+
+- `Cmd+S` (or `Ctrl+S`), save project
+- `Esc`, close modal
+
+## Platform notes
+
+The editor runs on any platform with Python 3.9+. The Install to PT button writes to a macOS system path and only works on macOS. On Windows or Linux, use Export and place the files in your Pro Tools install location manually.
+
+## Credits and acknowledgments
+
+The UACC (Unified Articulation Controller Code) standard was designed by Spitfire Audio. The bundled UACC template implements that standard.
+
+`.midnam` and `.middev` are MIDI Manufacturers Association formats, used by Pro Tools and other DAWs. This project is not affiliated with or endorsed by Avid Technology, Inc. Pro Tools is a trademark of Avid.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+## Author
+
+Curtis R. Macdonald, [curtismacdonald.com](https://curtismacdonald.com)

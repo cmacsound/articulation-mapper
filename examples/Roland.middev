@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MIDIDeviceTypes PUBLIC "-//MIDI Manufacturers Association//DTD MIDIDeviceTypes 03//EN" "http://www.sonosphere.com/dtds/MIDIDeviceTypes.dtd">
+
+<MIDIDeviceTypes>
+	<Author>cmacsound</Author>
+
+	<MIDIDeviceType Manufacturer="Roland" Model="FP-3" SupportsGeneralMIDI="false" SupportsMMC="false" CanRoute="false" IsSampler="false" IsDrumMachine="false" IsMixer="false" IsEffectUnit="false" >
+		<Receives MaxChannels="16" MTC="false" Clock="false" Notes="false" ProgramChanges="true" BankSelectMSB="true" BankSelectLSB="true" PanDisruptsStereo="false" />
+		<Transmits MaxChannels="1" MTC="false" Clock="false" Notes="false" ProgramChanges="true" BankSelectMSB="true" BankSelectLSB="true" />
+	</MIDIDeviceType>
+
+	<MIDIDeviceType Manufacturer="Roland" Model="FP-3 Perc" SupportsGeneralMIDI="false" SupportsMMC="false" CanRoute="false" IsSampler="false" IsDrumMachine="false" IsMixer="false" IsEffectUnit="false" >
+		<Receives MaxChannels="16" MTC="false" Clock="false" Notes="false" ProgramChanges="true" BankSelectMSB="true" BankSelectLSB="true" PanDisruptsStereo="false" />
+		<Transmits MaxChannels="1" MTC="false" Clock="false" Notes="false" ProgramChanges="true" BankSelectMSB="true" BankSelectLSB="true" />
+	</MIDIDeviceType>
+
+</MIDIDeviceTypes>

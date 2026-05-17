@@ -1,0 +1,33 @@
+{
+  "manufacturer": "Roland",
+  "model": "FP-3 Perc",
+  "author": "cmacsound",
+  "banks": [
+    {
+      "name": "Pop Drum Set",
+      "cc0": 0,
+      "cc32": 64,
+      "patches": [
+        {
+          "number": "001",
+          "name": "Pop Drum Set",
+          "program_change": 3
+        }
+      ]
+    },
+    {
+      "name": "Vox Drum Set",
+      "cc0": 0,
+      "cc32": 64,
+      "patches": [
+        {
+          "number": "001",
+          "name": "Vox Drum Set",
+          "program_change": 63
+        }
+      ]
+    }
+  ],
+  "name": "Roland FP-3 Perc",
+  "description": "Percussion preset list for the Roland FP-3."
+}
