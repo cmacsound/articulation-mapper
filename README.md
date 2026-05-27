@@ -34,12 +34,18 @@ python app.py
 
 Open <http://127.0.0.1:5000> in your browser.
 
+## Pro Tools setup (required, do this first)
+
+Pro Tools won't show patch names by name unless three pieces line up: a macOS MIDI Studio device, an installed `.middev`/`.midnam` pair, and a Pro Tools track routed to the named device alongside its instrument. The Manufacturer and Model strings must match exactly across all three.
+
+The full walkthrough, with the Audio MIDI Setup steps, the install paths, and the Ctrl-click second-output trick, is in [docs/pro-tools-setup.md](docs/pro-tools-setup.md). A reference MIDI Studio configuration ships in [examples/midi-configurations/](examples/midi-configurations/) that you can import to skip the manual device creation.
+
 ## What it does
 
 - Generates `.midnam` files that Pro Tools reads as patch and program name lists
 - Generates companion `.middev` files that register your device (hardware or virtual) as a MIDI device
 - Maps patch and articulation names to CC0/CC32 (bank select MSB/LSB) and program change values
-- One-click install to `/Library/Audio/MIDI Patch Names/` for Pro Tools (macOS only)
+- One-click install to the Pro Tools system folders for Pro Tools (macOS only)
 
 ## Features
 
@@ -47,7 +53,7 @@ Open <http://127.0.0.1:5000> in your browser.
 
 **Patch table.** Inline editing of name, CC0 (MSB), CC32 (LSB), and program change. Add single rows or bulk-add from a text list. Delete, duplicate, drag-to-reorder. Filter and search across all entries. Works equally well for hardware patch lists and sample-library articulation banks.
 
-**Templates.** Built-in templates ship with the tool: Roland FP-3, Roland FP-3 Perc, and UACC Standard Articulations (101 articulations). Select from the Template dropdown and click Load, then edit the manufacturer, model, and entries to match your device. See [examples/](examples/) for the raw `.midnam` and `.middev` versions.
+**Templates.** Built-in templates ship with the tool: Roland FP-3, Roland FP-3 Perc, and UACC Standard Articulations (105 articulations). Select from the Template dropdown and click Load, then edit the manufacturer, model, and entries to match your device. See [examples/](examples/) for the raw `.midnam`, `.middev`, and `.mcfg` versions.
 
 **Import.** Open any existing `.midnam` file and edit it. Or paste a list of patch names, one per line, and the tool auto-numbers them.
 
@@ -75,21 +81,32 @@ articulation-mapper/
 │   │   ├── roland-fp-3.json
 │   │   └── roland-fp-3-perc.json
 │   └── projects/                   # Saved user projects (gitignored)
-└── examples/                       # Reference .midnam and .middev files
+├── docs/
+│   └── pro-tools-setup.md          # Audio MIDI Setup + Pro Tools wiring guide
+└── examples/
+    ├── midnam/                     # Reference .midnam files (Roland FP-3, UACC)
+    ├── middev/                     # Reference .middev files
+    └── midi-configurations/        # Audio MIDI Setup .mcfg you can import
 ```
 
 ## Pro Tools integration
 
-After exporting or installing, restart Pro Tools. Your patch names will appear in the MIDI track's program/patch selector under the manufacturer and model you specified.
+After exporting or installing, quit and reopen Pro Tools. Your patch names will appear in the MIDI track's program/patch selector under the manufacturer and model you specified, **provided** you've also completed the Audio MIDI Setup and track-routing steps in [docs/pro-tools-setup.md](docs/pro-tools-setup.md).
 
-The install path on macOS is:
+The install paths on macOS are:
 
 ```
-/Library/Audio/MIDI Patch Names/[Manufacturer]/[Manufacturer] [Model].midnam
-/Library/Audio/MIDI Patch Names/[Manufacturer]/[Manufacturer].middev
+/Library/Audio/MIDI Patch Names/Avid/[Manufacturer]/[Manufacturer] [Model].midnam
+/Library/Audio/MIDI Devices/[Manufacturer].middev
 ```
 
-Writing to `/Library` requires permission. If install fails with a permission error, either grant your user write access to that folder or run the export and copy the files manually.
+Both targets are root-owned. The Install button writes the generated files to a temp location, then runs a single privileged copy via `osascript`. macOS shows its native authentication dialog. The server itself never runs as root.
+
+If a `[Manufacturer].middev` already exists with a different manufacturer attribute, the installer aborts and surfaces the conflict instead of silently overwriting. Matching manufacturer with a new model is merged in.
+
+### Bank structure
+
+Pro Tools' midnam parser only honours bank-select MIDI commands on `<PatchBank>` elements, never on individual `<Patch>` elements. CC0/CC32 differentiation therefore lives at the bank level. For articulation maps such as UACC, where each row is selected by a unique CC32, that means one `<PatchBank>` per row, each containing a single patch. The bundled UACC template follows this pattern.
 
 ## Keyboard shortcuts
 

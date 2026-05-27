@@ -13,14 +13,16 @@ Usage:
 
 import json
 import os
-import shutil
+import shlex
+import subprocess
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
 from flask import Flask, render_template, request, jsonify, send_file
 
 from lib.midnam import generate_midnam, parse_midnam
-from lib.middev import generate_middev
+from lib.middev import generate_middev, parse_middev
 
 app = Flask(__name__)
 
@@ -29,8 +31,13 @@ DATA_DIR = BASE_DIR / "data"
 TEMPLATES_DIR = DATA_DIR / "templates"
 PROJECTS_DIR = DATA_DIR / "projects"
 
-# Pro Tools midnam install path
-PROTOOLS_MIDNAM_PATH = Path("/Library/Audio/MIDI Patch Names")
+# Pro Tools install paths on macOS.
+# .middev is registered in /Library/Audio/MIDI Devices, alongside
+# Apple's "Digidesign Device List.middev". .midnam files live under
+# /Library/Audio/MIDI Patch Names/Avid/<Manufacturer>/, the location
+# Pro Tools scans for patch names.
+PROTOOLS_MIDDEV_DIR = Path("/Library/Audio/MIDI Devices")
+PROTOOLS_MIDNAM_DIR = Path("/Library/Audio/MIDI Patch Names/Avid")
 
 # Ensure data directories exist
 PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -230,50 +237,164 @@ def preview_middev():
 
 # ── Install to Pro Tools ──────────────────────────────────────────
 
+
+def _admin_shell(script: str) -> subprocess.CompletedProcess:
+    """Run a shell script as administrator via osascript.
+
+    macOS shows its native Authorization dialog. Returns the completed
+    process so the caller can branch on returncode.
+    """
+    quoted = script.replace('\\', '\\\\').replace('"', '\\"')
+    applescript = (
+        f'do shell script "{quoted}" '
+        f'with administrator privileges'
+    )
+    return subprocess.run(
+        ["osascript", "-e", applescript],
+        capture_output=True, text=True
+    )
+
+
+@app.route("/api/install/preflight", methods=["POST"])
+def install_preflight():
+    """Check the on-disk middev for a manufacturer/model conflict.
+
+    Returns ``{"ok": True}`` if installing would not collide with a
+    different manufacturer or model already registered at the target
+    middev path. Returns ``{"ok": False, "conflict": {...}}`` with the
+    existing manufacturer/model otherwise, so the UI can surface the
+    diff before authentication is requested.
+    """
+    data = request.get_json() or {}
+    manufacturer = (data.get("manufacturer") or "").strip()
+    model = (data.get("model") or "").strip()
+
+    if not manufacturer or not model:
+        return jsonify({"ok": False, "error":
+                        "Manufacturer and Model are both required."}), 400
+
+    middev_path = PROTOOLS_MIDDEV_DIR / f"{manufacturer}.middev"
+    if not middev_path.exists():
+        return jsonify({"ok": True, "existing": None})
+
+    try:
+        existing_devices = parse_middev(middev_path.read_text())
+    except Exception as e:
+        return jsonify({"ok": False, "error":
+                        f"Could not parse existing middev: {e}"}), 400
+
+    mismatched = [
+        d for d in existing_devices
+        if d.get("manufacturer", "") != manufacturer
+    ]
+    if mismatched:
+        return jsonify({
+            "ok": False,
+            "conflict": {
+                "path": str(middev_path),
+                "existing": existing_devices,
+                "incoming": {"manufacturer": manufacturer, "model": model},
+                "reason": "manufacturer-mismatch",
+            }
+        })
+
+    return jsonify({"ok": True, "existing": existing_devices})
+
+
 @app.route("/api/install", methods=["POST"])
 def install_to_protools():
-    """Install midnam and middev files to Pro Tools path."""
-    data = request.get_json()
-    manufacturer = data.get("manufacturer", "")
-    model = data.get("model", "")
+    """Install midnam to /Library/Audio/MIDI Patch Names/Avid/<Manufacturer>/
+    and middev to /Library/Audio/MIDI Devices/.
+
+    Both targets are root-owned. Files are generated into a temp dir
+    first, then a single osascript call moves them into place with
+    administrator privileges. The user sees one native macOS auth prompt.
+    """
+    data = request.get_json() or {}
+    manufacturer = (data.get("manufacturer") or "").strip()
+    model = (data.get("model") or "").strip()
     author = data.get("author", "Articulation Mapper")
     banks = data.get("banks", [])
+    force = bool(data.get("force", False))
 
-    # Create manufacturer subfolder
-    install_dir = PROTOOLS_MIDNAM_PATH / manufacturer
-    try:
-        install_dir.mkdir(parents=True, exist_ok=True)
-    except PermissionError:
+    if not manufacturer or not model:
         return jsonify({
-            "error": f"Permission denied writing to {install_dir}. "
-                     f"Try running with sudo or check folder permissions."
-        }), 403
+            "error": "Manufacturer and Model are both required."
+        }), 400
+    if not banks:
+        return jsonify({"error": "Add at least one articulation."}), 400
 
-    # Generate and write midnam
+    midnam_target_dir = PROTOOLS_MIDNAM_DIR / manufacturer
+    midnam_target = midnam_target_dir / f"{manufacturer} {model}.midnam"
+    middev_target = PROTOOLS_MIDDEV_DIR / f"{manufacturer}.middev"
+
     midnam_xml = generate_midnam(manufacturer, model, banks, author)
-    midnam_file = install_dir / f"{manufacturer} {model}.midnam"
-    midnam_file.write_text(midnam_xml)
 
-    # Generate and write middev
-    devices = [{"manufacturer": manufacturer, "model": model}]
-    middev_xml = generate_middev(devices, author)
-    middev_file = install_dir / f"{manufacturer}.middev"
+    incoming_device = {"manufacturer": manufacturer, "model": model}
+    if middev_target.exists():
+        try:
+            existing_devices = parse_middev(middev_target.read_text())
+        except Exception as e:
+            return jsonify({
+                "error": f"Could not parse existing middev: {e}"
+            }), 400
 
-    # If middev already exists, check if this device is already in it
-    if middev_file.exists():
-        existing = middev_file.read_text()
-        if f'Model="{model}"' not in existing:
-            # Append device to existing middev (before closing tag)
-            from lib.middev import parse_middev
-            existing_devices = parse_middev(existing)
-            existing_devices.append({"manufacturer": manufacturer, "model": model})
-            middev_xml = generate_middev(existing_devices, author)
-    middev_file.write_text(middev_xml)
+        mismatched = [
+            d for d in existing_devices
+            if d.get("manufacturer", "") != manufacturer
+        ]
+        if mismatched and not force:
+            return jsonify({
+                "error": "manufacturer-mismatch",
+                "conflict": {
+                    "path": str(middev_target),
+                    "existing": existing_devices,
+                    "incoming": incoming_device,
+                }
+            }), 409
+
+        # Force mode replaces the file outright with just the incoming
+        # device. Merge mode (matching manufacturer) keeps siblings
+        # under the same manufacturer.
+        if force:
+            merged = [incoming_device]
+        else:
+            kept = [
+                d for d in existing_devices
+                if d.get("manufacturer", "") == manufacturer
+            ]
+            models = {d.get("model", "") for d in kept}
+            merged = kept if model in models else kept + [incoming_device]
+        middev_xml = generate_middev(merged, author)
+    else:
+        middev_xml = generate_middev([incoming_device], author)
+
+    with tempfile.TemporaryDirectory(prefix="artmapper_install_") as td:
+        td_path = Path(td)
+        midnam_tmp = td_path / midnam_target.name
+        middev_tmp = td_path / middev_target.name
+        midnam_tmp.write_text(midnam_xml)
+        middev_tmp.write_text(middev_xml)
+
+        cmd = (
+            f"/bin/mkdir -p {shlex.quote(str(midnam_target_dir))} && "
+            f"/bin/cp {shlex.quote(str(midnam_tmp))} "
+            f"{shlex.quote(str(midnam_target))} && "
+            f"/bin/cp {shlex.quote(str(middev_tmp))} "
+            f"{shlex.quote(str(middev_target))}"
+        )
+        result = _admin_shell(cmd)
+
+    if result.returncode != 0:
+        msg = result.stderr.strip() or result.stdout.strip() or "Install failed"
+        if "User canceled" in msg or "(-128)" in msg:
+            return jsonify({"error": "Authentication cancelled."}), 403
+        return jsonify({"error": msg}), 500
 
     return jsonify({
         "message": "Installed successfully",
-        "midnam_path": str(midnam_file),
-        "middev_path": str(middev_file)
+        "midnam_path": str(midnam_target),
+        "middev_path": str(middev_target)
     })
 
 

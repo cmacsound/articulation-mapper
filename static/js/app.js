@@ -566,11 +566,43 @@ async function installToProTools() {
         return;
     }
 
-    if (!confirm(`Install "${data.manufacturer} ${data.model}" to Pro Tools?\n\nFiles will be written to:\n/Library/Audio/MIDI Patch Names/${data.manufacturer}/`)) {
+    const midnamPath = `/Library/Audio/MIDI Patch Names/Avid/${data.manufacturer}/${data.manufacturer} ${data.model}.midnam`;
+    const middevPath = `/Library/Audio/MIDI Devices/${data.manufacturer}.middev`;
+    if (!confirm(
+        `Install "${data.manufacturer} ${data.model}" to Pro Tools?\n\n` +
+        `macOS will request your password to write to:\n` +
+        `  ${midnamPath}\n  ${middevPath}`
+    )) {
         return;
     }
 
     try {
+        const pre = await fetch('/api/install/preflight', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        const preResult = await pre.json();
+        if (!pre.ok || preResult.ok === false) {
+            const conflict = preResult.conflict;
+            if (conflict) {
+                const existing = (conflict.existing || [])
+                    .map(d => `  - ${d.manufacturer} / ${d.model}`).join('\n');
+                if (!confirm(
+                    `Manufacturer conflict at:\n${conflict.path}\n\n` +
+                    `On disk:\n${existing}\n\n` +
+                    `Incoming:\n  - ${conflict.incoming.manufacturer} / ${conflict.incoming.model}\n\n` +
+                    `Overwrite anyway?`
+                )) {
+                    return;
+                }
+                data.force = true;
+            } else if (preResult.error) {
+                toast(preResult.error, 'error');
+                return;
+            }
+        }
+
         const res = await fetch('/api/install', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

@@ -1,1119 +1,1268 @@
 {
-    "name": "UACC Standard Articulations",
-    "description": "Universal Articulation Controller Channel standard mapping. Covers longs, legatos, shorts, trills, FX, and dynamic articulations.",
-    "manufacturer": "UACC",
-    "model": "Articulations",
-    "banks": [
-        {
-            "name": "lng generic",
-            "cc32": 1,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng generic",
-                    "program_change": 1
-                }
-            ]
-        },
-        {
-            "name": "lng alt",
-            "cc32": 2,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng alt",
-                    "program_change": 2
-                }
-            ]
-        },
-        {
-            "name": "lng 8va",
-            "cc32": 3,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng 8va",
-                    "program_change": 3
-                }
-            ]
-        },
-        {
-            "name": "lng 8va muted",
-            "cc32": 4,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng 8va muted",
-                    "program_change": 4
-                }
-            ]
-        },
-        {
-            "name": "lng sml half",
-            "cc32": 5,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng sml half",
-                    "program_change": 5
-                }
-            ]
-        },
-        {
-            "name": "lng sml muted",
-            "cc32": 6,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng sml muted",
-                    "program_change": 6
-                }
-            ]
-        },
-        {
-            "name": "lng muted",
-            "cc32": 7,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng muted",
-                    "program_change": 7
-                }
-            ]
-        },
-        {
-            "name": "lng sft flaut hollow",
-            "cc32": 8,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng sft flaut hollow",
-                    "program_change": 8
-                }
-            ]
-        },
-        {
-            "name": "lng hrd cuirve overblow",
-            "cc32": 9,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng hrd cuirve overblow",
-                    "program_change": 9
-                }
-            ]
-        },
-        {
-            "name": "lng harm",
-            "cc32": 10,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng harm",
-                    "program_change": 10
-                }
-            ]
-        },
-        {
-            "name": "lng trem fltr",
-            "cc32": 11,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng trem fltr",
-                    "program_change": 11
-                }
-            ]
-        },
-        {
-            "name": "lng trem muted",
-            "cc32": 12,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng trem muted",
-                    "program_change": 12
-                }
-            ]
-        },
-        {
-            "name": "lng trem soft low",
-            "cc32": 13,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng trem soft low",
-                    "program_change": 13
-                }
-            ]
-        },
-        {
-            "name": "lng trem hard high",
-            "cc32": 14,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng trem hard high",
-                    "program_change": 14
-                }
-            ]
-        },
-        {
-            "name": "lng trem muted low",
-            "cc32": 15,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng trem muted low",
-                    "program_change": 15
-                }
-            ]
-        },
-        {
-            "name": "lng vib molto vib",
-            "cc32": 16,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng vib molto vib",
-                    "program_change": 16
-                }
-            ]
-        },
-        {
-            "name": "lng hi sul tasto bells up",
-            "cc32": 17,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng hi sul tasto bells up",
-                    "program_change": 17
-                }
-            ]
-        },
-        {
-            "name": "lng low sul pont",
-            "cc32": 18,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng low sul pont",
-                    "program_change": 18
-                }
-            ]
-        },
-        {
-            "name": "lng low muted",
-            "cc32": 19,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "lng low muted",
-                    "program_change": 19
-                }
-            ]
-        },
-        {
-            "name": "leg generic",
-            "cc32": 20,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg generic",
-                    "program_change": 20
-                }
-            ]
-        },
-        {
-            "name": "leg alt",
-            "cc32": 21,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg alt",
-                    "program_change": 21
-                }
-            ]
-        },
-        {
-            "name": "leg 8va",
-            "cc32": 22,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg 8va",
-                    "program_change": 22
-                }
-            ]
-        },
-        {
-            "name": "leg 8va muted",
-            "cc32": 23,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg 8va muted",
-                    "program_change": 23
-                }
-            ]
-        },
-        {
-            "name": "leg sml",
-            "cc32": 24,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg sml",
-                    "program_change": 24
-                }
-            ]
-        },
-        {
-            "name": "leg sml muted",
-            "cc32": 25,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg sml muted",
-                    "program_change": 25
-                }
-            ]
-        },
-        {
-            "name": "leg muted",
-            "cc32": 26,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg muted",
-                    "program_change": 26
-                }
-            ]
-        },
-        {
-            "name": "leg sft",
-            "cc32": 27,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg sft",
-                    "program_change": 27
-                }
-            ]
-        },
-        {
-            "name": "leg hrd",
-            "cc32": 28,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg hrd",
-                    "program_change": 28
-                }
-            ]
-        },
-        {
-            "name": "leg harm",
-            "cc32": 29,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg harm",
-                    "program_change": 29
-                }
-            ]
-        },
-        {
-            "name": "leg trem",
-            "cc32": 30,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg trem",
-                    "program_change": 30
-                }
-            ]
-        },
-        {
-            "name": "leg slw port gliss",
-            "cc32": 31,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg slw port gliss",
-                    "program_change": 31
-                }
-            ]
-        },
-        {
-            "name": "leg fast",
-            "cc32": 32,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg fast",
-                    "program_change": 32
-                }
-            ]
-        },
-        {
-            "name": "leg run",
-            "cc32": 33,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg run",
-                    "program_change": 33
-                }
-            ]
-        },
-        {
-            "name": "leg detache",
-            "cc32": 34,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg detache",
-                    "program_change": 34
-                }
-            ]
-        },
-        {
-            "name": "leg hi",
-            "cc32": 35,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg hi",
-                    "program_change": 35
-                }
-            ]
-        },
-        {
-            "name": "leg low",
-            "cc32": 36,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg low",
-                    "program_change": 36
-                }
-            ]
-        },
-        {
-            "name": "leg single string sul c g etc",
-            "cc32": 37,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg single string sul c g etc",
-                    "program_change": 37
-                }
-            ]
-        },
-        {
-            "name": "leg muted slow",
-            "cc32": 38,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg muted slow",
-                    "program_change": 38
-                }
-            ]
-        },
-        {
-            "name": "leg soft slow",
-            "cc32": 39,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "leg soft slow",
-                    "program_change": 39
-                }
-            ]
-        },
-        {
-            "name": "shrt generic",
-            "cc32": 40,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt generic",
-                    "program_change": 40
-                }
-            ]
-        },
-        {
-            "name": "shrt alt",
-            "cc32": 41,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt alt",
-                    "program_change": 41
-                }
-            ]
-        },
-        {
-            "name": "vry shrt spic",
-            "cc32": 42,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "vry shrt spic",
-                    "program_change": 42
-                }
-            ]
-        },
-        {
-            "name": "vry shrt sft",
-            "cc32": 43,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "vry shrt sft",
-                    "program_change": 43
-                }
-            ]
-        },
-        {
-            "name": "shrt stacc",
-            "cc32": 44,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt stacc",
-                    "program_change": 44
-                }
-            ]
-        },
-        {
-            "name": "shrt 8va",
-            "cc32": 45,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt 8va",
-                    "program_change": 45
-                }
-            ]
-        },
-        {
-            "name": "shrt 8va muted",
-            "cc32": 46,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt 8va muted",
-                    "program_change": 46
-                }
-            ]
-        },
-        {
-            "name": "shrt muted",
-            "cc32": 47,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt muted",
-                    "program_change": 47
-                }
-            ]
-        },
-        {
-            "name": "shrt sft brush feather",
-            "cc32": 48,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt sft brush feather",
-                    "program_change": 48
-                }
-            ]
-        },
-        {
-            "name": "shrt hrd dig",
-            "cc32": 49,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt hrd dig",
-                    "program_change": 49
-                }
-            ]
-        },
-        {
-            "name": "shrt ten",
-            "cc32": 50,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt ten",
-                    "program_change": 50
-                }
-            ]
-        },
-        {
-            "name": "shrt ten sft",
-            "cc32": 51,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt ten sft",
-                    "program_change": 51
-                }
-            ]
-        },
-        {
-            "name": "shrt marc",
-            "cc32": 52,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt marc",
-                    "program_change": 52
-                }
-            ]
-        },
-        {
-            "name": "shrt marc soft",
-            "cc32": 53,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt marc soft",
-                    "program_change": 53
-                }
-            ]
-        },
-        {
-            "name": "shrt marc hard",
-            "cc32": 54,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt marc hard",
-                    "program_change": 54
-                }
-            ]
-        },
-        {
-            "name": "shrt marc long",
-            "cc32": 55,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt marc long",
-                    "program_change": 55
-                }
-            ]
-        },
-        {
-            "name": "shrt pluk pizz",
-            "cc32": 56,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt pluk pizz",
-                    "program_change": 56
-                }
-            ]
-        },
-        {
-            "name": "shrt pluk hrd brtk pizz",
-            "cc32": 57,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt pluk hrd brtk pizz",
-                    "program_change": 57
-                }
-            ]
-        },
-        {
-            "name": "shrt struck col legno",
-            "cc32": 58,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt struck col legno",
-                    "program_change": 58
-                }
-            ]
-        },
-        {
-            "name": "shrt hi",
-            "cc32": 59,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt hi",
-                    "program_change": 59
-                }
-            ]
-        },
-        {
-            "name": "shrt low",
-            "cc32": 60,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt low",
-                    "program_change": 60
-                }
-            ]
-        },
-        {
-            "name": "shrt harm",
-            "cc32": 61,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt harm",
-                    "program_change": 61
-                }
-            ]
-        },
-        {
-            "name": "shrt soft muted brushed",
-            "cc32": 62,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "shrt soft muted brushed",
-                    "program_change": 62
-                }
-            ]
-        },
-        {
-            "name": "tr m2",
-            "cc32": 70,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "tr m2",
-                    "program_change": 70
-                }
-            ]
-        },
-        {
-            "name": "tr M2",
-            "cc32": 71,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "tr M2",
-                    "program_change": 71
-                }
-            ]
-        },
-        {
-            "name": "tr m3",
-            "cc32": 72,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "tr m3",
-                    "program_change": 72
-                }
-            ]
-        },
-        {
-            "name": "tr M3",
-            "cc32": 73,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "tr M3",
-                    "program_change": 73
-                }
-            ]
-        },
-        {
-            "name": "tr P4",
-            "cc32": 74,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "tr P4",
-                    "program_change": 74
-                }
-            ]
-        },
-        {
-            "name": "multitongue",
-            "cc32": 75,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "multitongue",
-                    "program_change": 75
-                }
-            ]
-        },
-        {
-            "name": "multitongue muted",
-            "cc32": 76,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "multitongue muted",
-                    "program_change": 76
-                }
-            ]
-        },
-        {
-            "name": "fanfare",
-            "cc32": 77,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fanfare",
-                    "program_change": 77
-                }
-            ]
-        },
-        {
-            "name": "120bpm trem trill",
-            "cc32": 80,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "120bpm trem trill",
-                    "program_change": 80
-                }
-            ]
-        },
-        {
-            "name": "150bpm trem trill",
-            "cc32": 81,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "150bpm trem trill",
-                    "program_change": 81
-                }
-            ]
-        },
-        {
-            "name": "180bpm trem trill",
-            "cc32": 82,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "180bpm trem trill",
-                    "program_change": 82
-                }
-            ]
-        },
-        {
-            "name": "muted 120bpm trem trill",
-            "cc32": 83,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "muted 120bpm trem trill",
-                    "program_change": 83
-                }
-            ]
-        },
-        {
-            "name": "muted 150bpm trem trill",
-            "cc32": 84,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "muted 150bpm trem trill",
-                    "program_change": 84
-                }
-            ]
-        },
-        {
-            "name": "muted 180bpm trem trill",
-            "cc32": 85,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "muted 180bpm trem trill",
-                    "program_change": 85
-                }
-            ]
-        },
-        {
-            "name": "fx1",
-            "cc32": 90,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx1",
-                    "program_change": 90
-                }
-            ]
-        },
-        {
-            "name": "fx2",
-            "cc32": 91,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx2",
-                    "program_change": 91
-                }
-            ]
-        },
-        {
-            "name": "fx3",
-            "cc32": 92,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx3",
-                    "program_change": 92
-                }
-            ]
-        },
-        {
-            "name": "fx4",
-            "cc32": 93,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx4",
-                    "program_change": 93
-                }
-            ]
-        },
-        {
-            "name": "fx5",
-            "cc32": 94,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx5",
-                    "program_change": 94
-                }
-            ]
-        },
-        {
-            "name": "fx6",
-            "cc32": 95,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx6",
-                    "program_change": 95
-                }
-            ]
-        },
-        {
-            "name": "fx7",
-            "cc32": 96,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx7",
-                    "program_change": 96
-                }
-            ]
-        },
-        {
-            "name": "fx8",
-            "cc32": 97,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx8",
-                    "program_change": 97
-                }
-            ]
-        },
-        {
-            "name": "fx9",
-            "cc32": 98,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx9",
-                    "program_change": 98
-                }
-            ]
-        },
-        {
-            "name": "fx10",
-            "cc32": 99,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "fx10",
-                    "program_change": 99
-                }
-            ]
-        },
-        {
-            "name": "up rips & runs",
-            "cc32": 100,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "up rips & runs",
-                    "program_change": 100
-                }
-            ]
-        },
-        {
-            "name": "dwn falls & runs",
-            "cc32": 101,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "dwn falls & runs",
-                    "program_change": 101
-                }
-            ]
-        },
-        {
-            "name": "crescendo",
-            "cc32": 102,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "crescendo",
-                    "program_change": 102
-                }
-            ]
-        },
-        {
-            "name": "diminuendo",
-            "cc32": 103,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "diminuendo",
-                    "program_change": 103
-                }
-            ]
-        },
-        {
-            "name": "arc",
-            "cc32": 104,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "arc",
-                    "program_change": 104
-                }
-            ]
-        },
-        {
-            "name": "slides",
-            "cc32": 105,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "slides",
-                    "program_change": 105
-                }
-            ]
-        },
-        {
-            "name": "crescendo muted",
-            "cc32": 106,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "crescendo muted",
-                    "program_change": 106
-                }
-            ]
-        },
-        {
-            "name": "diminuendo muted",
-            "cc32": 107,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "diminuendo muted",
-                    "program_change": 107
-                }
-            ]
-        },
-        {
-            "name": "upwards stopped falls runs",
-            "cc32": 108,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "upwards stopped falls runs",
-                    "program_change": 108
-                }
-            ]
-        },
-        {
-            "name": "downwards stopped falls runs",
-            "cc32": 109,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "downwards stopped falls runs",
-                    "program_change": 109
-                }
-            ]
-        },
-        {
-            "name": "disco up rips",
-            "cc32": 110,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "disco up rips",
-                    "program_change": 110
-                }
-            ]
-        },
-        {
-            "name": "disco down falls",
-            "cc32": 111,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "disco down falls",
-                    "program_change": 111
-                }
-            ]
-        },
-        {
-            "name": "long sul C G etc",
-            "cc32": 112,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "long sul C G etc",
-                    "program_change": 112
-                }
-            ]
-        },
-        {
-            "name": "long lower distorted",
-            "cc32": 113,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "long lower distorted",
-                    "program_change": 113
-                }
-            ]
-        },
-        {
-            "name": "long higher soft super sul tasto",
-            "cc32": 114,
-            "patches": [
-                {
-                    "number": "001",
-                    "name": "long higher soft super sul tasto",
-                    "program_change": 114
-                }
-            ]
+  "name": "UACC Standard Articulations",
+  "description": "Universal Articulation Controller Channel standard mapping. 105-entry articulation set covering longs, legatos, shorts, trills, FX, and dynamic articulations.",
+  "manufacturer": "UACC",
+  "model": "Articulations",
+  "banks": [
+    {
+      "name": "lng genric",
+      "cc0": null,
+      "cc32": 1,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng genric",
+          "program_change": 1
         }
-    ]
+      ]
+    },
+    {
+      "name": "lng alt",
+      "cc0": null,
+      "cc32": 2,
+      "patches": [
+        {
+          "number": "002",
+          "name": "lng alt",
+          "program_change": 2
+        }
+      ]
+    },
+    {
+      "name": "lng 8va",
+      "cc0": null,
+      "cc32": 3,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng 8va",
+          "program_change": 3
+        }
+      ]
+    },
+    {
+      "name": "lng 8va muted",
+      "cc0": null,
+      "cc32": 4,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng 8va muted",
+          "program_change": 4
+        }
+      ]
+    },
+    {
+      "name": "lng sml half",
+      "cc0": null,
+      "cc32": 5,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng sml half",
+          "program_change": 5
+        }
+      ]
+    },
+    {
+      "name": "lng sml muted",
+      "cc0": null,
+      "cc32": 6,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng sml muted",
+          "program_change": 6
+        }
+      ]
+    },
+    {
+      "name": "lng muted",
+      "cc0": null,
+      "cc32": 7,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng muted",
+          "program_change": 7
+        }
+      ]
+    },
+    {
+      "name": "lng sft flaut hollow",
+      "cc0": null,
+      "cc32": 8,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng sft flaut hollow",
+          "program_change": 8
+        }
+      ]
+    },
+    {
+      "name": "lng hrd cuirve overblow",
+      "cc0": null,
+      "cc32": 9,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng hrd cuirve/overb",
+          "program_change": 9
+        }
+      ]
+    },
+    {
+      "name": "lng harm",
+      "cc0": null,
+      "cc32": 10,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng harm",
+          "program_change": 10
+        }
+      ]
+    },
+    {
+      "name": "lng trem fltr",
+      "cc0": null,
+      "cc32": 11,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng trem fltr",
+          "program_change": 11
+        }
+      ]
+    },
+    {
+      "name": "lng trem muted",
+      "cc0": null,
+      "cc32": 12,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng trem muted",
+          "program_change": 12
+        }
+      ]
+    },
+    {
+      "name": "lng trem soft low",
+      "cc0": null,
+      "cc32": 13,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng trem soft low",
+          "program_change": 13
+        }
+      ]
+    },
+    {
+      "name": "lng trem hard high",
+      "cc0": null,
+      "cc32": 14,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng trem hard high",
+          "program_change": 14
+        }
+      ]
+    },
+    {
+      "name": "lng trem muted low",
+      "cc0": null,
+      "cc32": 15,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng trem muted low",
+          "program_change": 15
+        }
+      ]
+    },
+    {
+      "name": "lng vib molto vib",
+      "cc0": null,
+      "cc32": 16,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng vib molto vib",
+          "program_change": 16
+        }
+      ]
+    },
+    {
+      "name": "lng hi sul tasto bells up",
+      "cc0": null,
+      "cc32": 17,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng hi sul tasto/bells up",
+          "program_change": 17
+        }
+      ]
+    },
+    {
+      "name": "lng low sul pont",
+      "cc0": null,
+      "cc32": 18,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng low sul pont",
+          "program_change": 18
+        }
+      ]
+    },
+    {
+      "name": "lng low muted",
+      "cc0": null,
+      "cc32": 19,
+      "patches": [
+        {
+          "number": "001",
+          "name": "lng low muted",
+          "program_change": 19
+        }
+      ]
+    },
+    {
+      "name": "leg genric",
+      "cc0": null,
+      "cc32": 20,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg genric",
+          "program_change": 20
+        }
+      ]
+    },
+    {
+      "name": "leg alt",
+      "cc0": null,
+      "cc32": 21,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg alt",
+          "program_change": 21
+        }
+      ]
+    },
+    {
+      "name": "leg 8va",
+      "cc0": null,
+      "cc32": 22,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg 8va",
+          "program_change": 22
+        }
+      ]
+    },
+    {
+      "name": "leg 8va muted",
+      "cc0": null,
+      "cc32": 23,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg 8va muted",
+          "program_change": 23
+        }
+      ]
+    },
+    {
+      "name": "leg sml",
+      "cc0": null,
+      "cc32": 24,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg sml",
+          "program_change": 24
+        }
+      ]
+    },
+    {
+      "name": "leg sml muted",
+      "cc0": null,
+      "cc32": 25,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg sml muted",
+          "program_change": 25
+        }
+      ]
+    },
+    {
+      "name": "leg muted",
+      "cc0": null,
+      "cc32": 26,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg muted",
+          "program_change": 26
+        }
+      ]
+    },
+    {
+      "name": "leg sft",
+      "cc0": null,
+      "cc32": 27,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg sft",
+          "program_change": 27
+        }
+      ]
+    },
+    {
+      "name": "leg hrd",
+      "cc0": null,
+      "cc32": 28,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg sft",
+          "program_change": 28
+        }
+      ]
+    },
+    {
+      "name": "leg harm",
+      "cc0": null,
+      "cc32": 29,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg harm",
+          "program_change": 29
+        }
+      ]
+    },
+    {
+      "name": "leg trem",
+      "cc0": null,
+      "cc32": 30,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg trem",
+          "program_change": 30
+        }
+      ]
+    },
+    {
+      "name": "leg slw port gliss",
+      "cc0": null,
+      "cc32": 31,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg slw porta gliss",
+          "program_change": 31
+        }
+      ]
+    },
+    {
+      "name": "leg fast",
+      "cc0": null,
+      "cc32": 32,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg fast",
+          "program_change": 32
+        }
+      ]
+    },
+    {
+      "name": "leg run",
+      "cc0": null,
+      "cc32": 33,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg run",
+          "program_change": 33
+        }
+      ]
+    },
+    {
+      "name": "leg detache",
+      "cc0": null,
+      "cc32": 34,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg detache",
+          "program_change": 34
+        }
+      ]
+    },
+    {
+      "name": "leg hi",
+      "cc0": null,
+      "cc32": 35,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg hi",
+          "program_change": 35
+        }
+      ]
+    },
+    {
+      "name": "leg low",
+      "cc0": null,
+      "cc32": 36,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg low",
+          "program_change": 36
+        }
+      ]
+    },
+    {
+      "name": "leg single string sul c g etc",
+      "cc0": null,
+      "cc32": 37,
+      "patches": [
+        {
+          "number": "001",
+          "name": "single string sul c g etc",
+          "program_change": 37
+        }
+      ]
+    },
+    {
+      "name": "leg muted slow",
+      "cc0": null,
+      "cc32": 38,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg muted slow",
+          "program_change": 38
+        }
+      ]
+    },
+    {
+      "name": "leg soft slow",
+      "cc0": null,
+      "cc32": 39,
+      "patches": [
+        {
+          "number": "001",
+          "name": "leg soft slow",
+          "program_change": 39
+        }
+      ]
+    },
+    {
+      "name": "shrt genric",
+      "cc0": null,
+      "cc32": 40,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt genric",
+          "program_change": 40
+        }
+      ]
+    },
+    {
+      "name": "shrt alt",
+      "cc0": null,
+      "cc32": 41,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt alt",
+          "program_change": 41
+        }
+      ]
+    },
+    {
+      "name": "vry shrt spic",
+      "cc0": null,
+      "cc32": 42,
+      "patches": [
+        {
+          "number": "001",
+          "name": "vry shrt spic",
+          "program_change": 42
+        }
+      ]
+    },
+    {
+      "name": "vry shrt sft",
+      "cc0": null,
+      "cc32": 43,
+      "patches": [
+        {
+          "number": "001",
+          "name": "vry shrt sft",
+          "program_change": 43
+        }
+      ]
+    },
+    {
+      "name": "shrt stacc",
+      "cc0": null,
+      "cc32": 44,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt stacc",
+          "program_change": 44
+        }
+      ]
+    },
+    {
+      "name": "shrt 8va",
+      "cc0": null,
+      "cc32": 45,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt 8va",
+          "program_change": 45
+        }
+      ]
+    },
+    {
+      "name": "shrt 8va muted",
+      "cc0": null,
+      "cc32": 46,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt 8va muted",
+          "program_change": 46
+        }
+      ]
+    },
+    {
+      "name": "shrt muted",
+      "cc0": null,
+      "cc32": 47,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt muted",
+          "program_change": 47
+        }
+      ]
+    },
+    {
+      "name": "shrt sft brush feather",
+      "cc0": null,
+      "cc32": 48,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt sft brush/feather",
+          "program_change": 48
+        }
+      ]
+    },
+    {
+      "name": "shrt hrd dig",
+      "cc0": null,
+      "cc32": 49,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt hrd dig",
+          "program_change": 49
+        }
+      ]
+    },
+    {
+      "name": "shrt ten",
+      "cc0": null,
+      "cc32": 50,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt ten",
+          "program_change": 50
+        }
+      ]
+    },
+    {
+      "name": "shrt ten sft",
+      "cc0": null,
+      "cc32": 51,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt ten sft",
+          "program_change": 51
+        }
+      ]
+    },
+    {
+      "name": "shrt marc",
+      "cc0": null,
+      "cc32": 52,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt marc",
+          "program_change": 52
+        }
+      ]
+    },
+    {
+      "name": "shrt marc soft",
+      "cc0": null,
+      "cc32": 53,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt marc soft",
+          "program_change": 53
+        }
+      ]
+    },
+    {
+      "name": "shrt marc hard",
+      "cc0": null,
+      "cc32": 54,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt marc hard",
+          "program_change": 54
+        }
+      ]
+    },
+    {
+      "name": "shrt marc long",
+      "cc0": null,
+      "cc32": 55,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt marc long",
+          "program_change": 55
+        }
+      ]
+    },
+    {
+      "name": "shrt pluk pizz",
+      "cc0": null,
+      "cc32": 56,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt pluk pizz",
+          "program_change": 56
+        }
+      ]
+    },
+    {
+      "name": "shrt pluk hrd brtk pizz",
+      "cc0": null,
+      "cc32": 57,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt pluk hrd brtk pizz",
+          "program_change": 57
+        }
+      ]
+    },
+    {
+      "name": "shrt struck col legno",
+      "cc0": null,
+      "cc32": 58,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt struck col legno",
+          "program_change": 58
+        }
+      ]
+    },
+    {
+      "name": "shrt hi",
+      "cc0": null,
+      "cc32": 59,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt hi",
+          "program_change": 59
+        }
+      ]
+    },
+    {
+      "name": "shrt low",
+      "cc0": null,
+      "cc32": 60,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt low",
+          "program_change": 60
+        }
+      ]
+    },
+    {
+      "name": "shrt harm",
+      "cc0": null,
+      "cc32": 61,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt harm",
+          "program_change": 61
+        }
+      ]
+    },
+    {
+      "name": "shrt soft muted brushed",
+      "cc0": null,
+      "cc32": 62,
+      "patches": [
+        {
+          "number": "001",
+          "name": "shrt soft muted brushed",
+          "program_change": 62
+        }
+      ]
+    },
+    {
+      "name": "tr m2",
+      "cc0": null,
+      "cc32": 70,
+      "patches": [
+        {
+          "number": "001",
+          "name": "tr m2",
+          "program_change": 70
+        }
+      ]
+    },
+    {
+      "name": "tr M2",
+      "cc0": null,
+      "cc32": 71,
+      "patches": [
+        {
+          "number": "001",
+          "name": "tr M2",
+          "program_change": 71
+        }
+      ]
+    },
+    {
+      "name": "tr m3",
+      "cc0": null,
+      "cc32": 72,
+      "patches": [
+        {
+          "number": "001",
+          "name": "tr M2",
+          "program_change": 72
+        }
+      ]
+    },
+    {
+      "name": "tr M3",
+      "cc0": null,
+      "cc32": 73,
+      "patches": [
+        {
+          "number": "001",
+          "name": "tr M3",
+          "program_change": 73
+        }
+      ]
+    },
+    {
+      "name": "tr P4",
+      "cc0": null,
+      "cc32": 74,
+      "patches": [
+        {
+          "number": "001",
+          "name": "tr P4",
+          "program_change": 1
+        }
+      ]
+    },
+    {
+      "name": "multitongue",
+      "cc0": null,
+      "cc32": 75,
+      "patches": [
+        {
+          "number": "001",
+          "name": "multitongue",
+          "program_change": 75
+        }
+      ]
+    },
+    {
+      "name": "multitongue muted",
+      "cc0": null,
+      "cc32": 76,
+      "patches": [
+        {
+          "number": "001",
+          "name": "multitongue muted",
+          "program_change": 76
+        }
+      ]
+    },
+    {
+      "name": "fanfare",
+      "cc0": null,
+      "cc32": 77,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fanfare",
+          "program_change": 77
+        }
+      ]
+    },
+    {
+      "name": "120bpm trem trill",
+      "cc0": null,
+      "cc32": 80,
+      "patches": [
+        {
+          "number": "001",
+          "name": "120bpm trem trill",
+          "program_change": 80
+        }
+      ]
+    },
+    {
+      "name": "150bpm trem trill",
+      "cc0": null,
+      "cc32": 81,
+      "patches": [
+        {
+          "number": "001",
+          "name": "150bpm trem trill",
+          "program_change": 81
+        }
+      ]
+    },
+    {
+      "name": "180bpm trem trill",
+      "cc0": null,
+      "cc32": 82,
+      "patches": [
+        {
+          "number": "001",
+          "name": "180bpm trem trill",
+          "program_change": 82
+        }
+      ]
+    },
+    {
+      "name": "muted 120bpm trem trill",
+      "cc0": null,
+      "cc32": 83,
+      "patches": [
+        {
+          "number": "001",
+          "name": "muted 120bpm trem trill",
+          "program_change": 83
+        }
+      ]
+    },
+    {
+      "name": "muted 150 bpm trem trill",
+      "cc0": null,
+      "cc32": 84,
+      "patches": [
+        {
+          "number": "001",
+          "name": "muted 150 bpm trem trill",
+          "program_change": 84
+        }
+      ]
+    },
+    {
+      "name": "muted 180bpm trem trill",
+      "cc0": null,
+      "cc32": 85,
+      "patches": [
+        {
+          "number": "001",
+          "name": "muted 180bpm trem trill",
+          "program_change": 85
+        }
+      ]
+    },
+    {
+      "name": "86",
+      "cc0": null,
+      "cc32": 86,
+      "patches": [
+        {
+          "number": "001",
+          "name": "",
+          "program_change": 86
+        }
+      ]
+    },
+    {
+      "name": "87",
+      "cc0": null,
+      "cc32": 87,
+      "patches": [
+        {
+          "number": "001",
+          "name": "87",
+          "program_change": 87
+        }
+      ]
+    },
+    {
+      "name": "88",
+      "cc0": null,
+      "cc32": 88,
+      "patches": [
+        {
+          "number": "001",
+          "name": "88",
+          "program_change": 88
+        }
+      ]
+    },
+    {
+      "name": "89",
+      "cc0": null,
+      "cc32": 89,
+      "patches": [
+        {
+          "number": "001",
+          "name": "89",
+          "program_change": 89
+        }
+      ]
+    },
+    {
+      "name": "fx1",
+      "cc0": null,
+      "cc32": 90,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx1",
+          "program_change": 90
+        }
+      ]
+    },
+    {
+      "name": "fx2",
+      "cc0": null,
+      "cc32": 91,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx2",
+          "program_change": 91
+        }
+      ]
+    },
+    {
+      "name": "fx3",
+      "cc0": null,
+      "cc32": 92,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx3",
+          "program_change": 92
+        }
+      ]
+    },
+    {
+      "name": "fx4",
+      "cc0": null,
+      "cc32": 93,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx4",
+          "program_change": 93
+        }
+      ]
+    },
+    {
+      "name": "fx5",
+      "cc0": null,
+      "cc32": 94,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx5",
+          "program_change": 94
+        }
+      ]
+    },
+    {
+      "name": "fx6",
+      "cc0": null,
+      "cc32": 95,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx1",
+          "program_change": 95
+        }
+      ]
+    },
+    {
+      "name": "fx7",
+      "cc0": null,
+      "cc32": 96,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx7",
+          "program_change": 96
+        }
+      ]
+    },
+    {
+      "name": "fx8",
+      "cc0": null,
+      "cc32": 97,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx8",
+          "program_change": 97
+        }
+      ]
+    },
+    {
+      "name": "fx9",
+      "cc0": null,
+      "cc32": 98,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx9",
+          "program_change": 98
+        }
+      ]
+    },
+    {
+      "name": "fx10",
+      "cc0": null,
+      "cc32": 99,
+      "patches": [
+        {
+          "number": "001",
+          "name": "fx10",
+          "program_change": 99
+        }
+      ]
+    },
+    {
+      "name": "up rips & runs",
+      "cc0": null,
+      "cc32": 100,
+      "patches": [
+        {
+          "number": "001",
+          "name": "up rips & runs",
+          "program_change": 100
+        }
+      ]
+    },
+    {
+      "name": "dwn falls & runs",
+      "cc0": null,
+      "cc32": 101,
+      "patches": [
+        {
+          "number": "001",
+          "name": "dwn falls & runs",
+          "program_change": 101
+        }
+      ]
+    },
+    {
+      "name": "crescendo",
+      "cc0": null,
+      "cc32": 102,
+      "patches": [
+        {
+          "number": "001",
+          "name": "crescendo",
+          "program_change": 102
+        }
+      ]
+    },
+    {
+      "name": "diminuendo",
+      "cc0": null,
+      "cc32": 103,
+      "patches": [
+        {
+          "number": "001",
+          "name": "diminuendo",
+          "program_change": 103
+        }
+      ]
+    },
+    {
+      "name": "arc",
+      "cc0": null,
+      "cc32": 104,
+      "patches": [
+        {
+          "number": "001",
+          "name": "arc",
+          "program_change": 104
+        }
+      ]
+    },
+    {
+      "name": "slides",
+      "cc0": null,
+      "cc32": 105,
+      "patches": [
+        {
+          "number": "001",
+          "name": "slides",
+          "program_change": 105
+        }
+      ]
+    },
+    {
+      "name": "crescendo muted",
+      "cc0": null,
+      "cc32": 106,
+      "patches": [
+        {
+          "number": "001",
+          "name": "crescendo muted",
+          "program_change": 106
+        }
+      ]
+    },
+    {
+      "name": "diminuendo muted",
+      "cc0": null,
+      "cc32": 107,
+      "patches": [
+        {
+          "number": "001",
+          "name": "diminuendo muted",
+          "program_change": 107
+        }
+      ]
+    },
+    {
+      "name": "upwards stopped falls runs",
+      "cc0": null,
+      "cc32": 108,
+      "patches": [
+        {
+          "number": "001",
+          "name": "upwards stopped falls runs",
+          "program_change": 108
+        }
+      ]
+    },
+    {
+      "name": "downwards stoppd falls runs",
+      "cc0": null,
+      "cc32": 109,
+      "patches": [
+        {
+          "number": "001",
+          "name": "upwards stopped falls runs",
+          "program_change": 109
+        }
+      ]
+    },
+    {
+      "name": "disco up rips",
+      "cc0": null,
+      "cc32": 110,
+      "patches": [
+        {
+          "number": "001",
+          "name": "disco up rips",
+          "program_change": 110
+        }
+      ]
+    },
+    {
+      "name": "disco down falls",
+      "cc0": null,
+      "cc32": 111,
+      "patches": [
+        {
+          "number": "001",
+          "name": "disco down falls",
+          "program_change": 111
+        }
+      ]
+    },
+    {
+      "name": "long sul C G etc",
+      "cc0": null,
+      "cc32": 112,
+      "patches": [
+        {
+          "number": "001",
+          "name": "sul C G etc",
+          "program_change": 112
+        }
+      ]
+    },
+    {
+      "name": "long lower distorted",
+      "cc0": null,
+      "cc32": 113,
+      "patches": [
+        {
+          "number": "001",
+          "name": "long lower distorted",
+          "program_change": 113
+        }
+      ]
+    },
+    {
+      "name": "long higher soft super sul tasto",
+      "cc0": null,
+      "cc32": 114,
+      "patches": [
+        {
+          "number": "001",
+          "name": "long higher soft super sul tasto",
+          "program_change": 114
+        }
+      ]
+    }
+  ]
 }

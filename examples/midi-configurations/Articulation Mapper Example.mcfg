@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>apple.midi.audiomidisetup.widget.xPosition</key>
+			<integer>486</integer>
+			<key>apple.midi.audiomidisetup.widget.yPosition</key>
+			<integer>14</integer>
+			<key>driver</key>
+			<string>com.Euphonix.MIDIWrapper</string>
+			<key>entities</key>
+			<array>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-437490858</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Euphonix Port 1</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1964134839</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>1901315157</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-882412852</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Euphonix Port 2</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>761910089</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>1790136325</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1548252477</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Euphonix Port 3</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>93987866</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>868598606</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-318381859</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Euphonix Port 4</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1677553116</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>1035828835</integer>
+				</dict>
+			</array>
+			<key>manufacturer</key>
+			<string>Euphonix</string>
+			<key>model</key>
+			<string>Control Surface</string>
+			<key>name</key>
+			<string>Euphonix MIDI</string>
+			<key>uniqueID</key>
+			<integer>1735764592</integer>
+		</dict>
+	</array>
+	<key>externalDevices</key>
+	<array>
+		<dict>
+			<key>apple.midi.audiomidisetup.widget.xPosition</key>
+			<integer>541</integer>
+			<key>apple.midi.audiomidisetup.widget.yPosition</key>
+			<integer>258</integer>
+			<key>entities</key>
+			<array>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1327717093</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 1</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-784353154</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>1778480804</integer>
+				</dict>
+			</array>
+			<key>manufacturer</key>
+			<string>UACC</string>
+			<key>model</key>
+			<string>Articulations</string>
+			<key>name</key>
+			<string>Articulations</string>
+			<key>receiveChannels</key>
+			<integer>65535</integer>
+			<key>receives MTC</key>
+			<integer>0</integer>
+			<key>receives clock</key>
+			<integer>0</integer>
+			<key>supports General MIDI</key>
+			<integer>0</integer>
+			<key>supports MMC</key>
+			<integer>0</integer>
+			<key>transmitChannels</key>
+			<integer>65535</integer>
+			<key>transmits MTC</key>
+			<integer>0</integer>
+			<key>transmits clock</key>
+			<integer>0</integer>
+			<key>uniqueID</key>
+			<integer>-435108985</integer>
+		</dict>
+		<dict>
+			<key>apple.midi.audiomidisetup.widget.xPosition</key>
+			<integer>407</integer>
+			<key>apple.midi.audiomidisetup.widget.yPosition</key>
+			<integer>227</integer>
+			<key>can route</key>
+			<integer>0</integer>
+			<key>entities</key>
+			<array>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-848682869</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 1</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-324145330</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-1178096412</integer>
+				</dict>
+			</array>
+			<key>manufacturer</key>
+			<string>Roland</string>
+			<key>max receive channels</key>
+			<integer>16</integer>
+			<key>max transmit channels</key>
+			<integer>16</integer>
+			<key>model</key>
+			<string>FP-3</string>
+			<key>name</key>
+			<string>FP-3</string>
+			<key>receiveChannels</key>
+			<integer>65535</integer>
+			<key>receives MTC</key>
+			<integer>0</integer>
+			<key>receives clock</key>
+			<integer>0</integer>
+			<key>supports General MIDI</key>
+			<integer>0</integer>
+			<key>supports MMC</key>
+			<integer>0</integer>
+			<key>transmitChannels</key>
+			<integer>65535</integer>
+			<key>transmits MTC</key>
+			<integer>0</integer>
+			<key>transmits clock</key>
+			<integer>0</integer>
+			<key>uniqueID</key>
+			<integer>646906544</integer>
+		</dict>
+		<dict>
+			<key>apple.midi.audiomidisetup.widget.xPosition</key>
+			<integer>461</integer>
+			<key>apple.midi.audiomidisetup.widget.yPosition</key>
+			<integer>355</integer>
+			<key>can route</key>
+			<integer>0</integer>
+			<key>entities</key>
+			<array>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-411178675</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 1</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1150253915</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>971028719</integer>
+				</dict>
+			</array>
+			<key>is drum machine</key>
+			<integer>0</integer>
+			<key>is effect unit</key>
+			<integer>0</integer>
+			<key>is mixer</key>
+			<integer>0</integer>
+			<key>is sampler</key>
+			<integer>0</integer>
+			<key>manufacturer</key>
+			<string>Roland</string>
+			<key>max receive channels</key>
+			<integer>16</integer>
+			<key>max transmit channels</key>
+			<integer>1</integer>
+			<key>model</key>
+			<string>FP-3 Perc</string>
+			<key>name</key>
+			<string>FP-3 Perc</string>
+			<key>pan disrupts stereo</key>
+			<integer>0</integer>
+			<key>receiveChannels</key>
+			<integer>65535</integer>
+			<key>receives MTC</key>
+			<integer>0</integer>
+			<key>receives bank select LSB</key>
+			<integer>1</integer>
+			<key>receives bank select MSB</key>
+			<integer>1</integer>
+			<key>receives clock</key>
+			<integer>0</integer>
+			<key>receives notes</key>
+			<integer>0</integer>
+			<key>receives program changes</key>
+			<integer>1</integer>
+			<key>supports General MIDI</key>
+			<integer>0</integer>
+			<key>supports MMC</key>
+			<integer>0</integer>
+			<key>transmitChannels</key>
+			<integer>1</integer>
+			<key>transmits MTC</key>
+			<integer>0</integer>
+			<key>transmits bank select LSB</key>
+			<integer>1</integer>
+			<key>transmits bank select MSB</key>
+			<integer>1</integer>
+			<key>transmits clock</key>
+			<integer>0</integer>
+			<key>transmits notes</key>
+			<integer>0</integer>
+			<key>transmits program changes</key>
+			<integer>1</integer>
+			<key>uniqueID</key>
+			<integer>-822542244</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MIDIDeviceTypes>
+
+<MIDIDeviceTypes>
+	<Author>cmacsound</Author>
+
+
+	<MIDIDeviceType	Manufacturer="UACC"
+					Model="Articulations"
+					CanRoute="false"
+					SupportsMMC="false"
+					Image="OMS1099">
+		<DeviceID Min="0" Max="127" Default="0" Base="0" />
+		<Transmits	MaxChannels="16"
+					MTC="false"
+					Clock="false" />
+	</MIDIDeviceType>
+
+
+</MIDIDeviceTypes>

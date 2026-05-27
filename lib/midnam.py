@@ -3,6 +3,11 @@ Midnam XML generator for Pro Tools articulation mapping.
 
 Generates MIDINameDocument XML files (.midnam) that Pro Tools reads
 to populate patch/program name lists for MIDI tracks.
+
+Pro Tools' midnam parser only accepts ``<MIDICommands>`` on
+``<PatchBank>``, never on a ``<Patch>``. So even when each row has a
+unique CC32 (UACC, articulation maps), every CC32-differentiated
+entry gets its own ``<PatchBank>`` containing a single patch.
 """
 
 from xml.sax.saxutils import escape
@@ -41,7 +46,6 @@ def generate_midnam(manufacturer, model, banks, author="Articulation Mapper"):
     lines.append(f'\t\t<Manufacturer>{escape(manufacturer)}</Manufacturer>')
     lines.append(f'\t\t<Model>{escape(model)}</Model>')
 
-    # Channel name set assignments (all 16 channels -> single name set)
     channel_set_name = "Programs"
     lines.append('\t\t<CustomDeviceMode Name="" >')
     lines.append('\t\t\t<ChannelNameSetAssignments>')
@@ -51,19 +55,15 @@ def generate_midnam(manufacturer, model, banks, author="Articulation Mapper"):
     lines.append('\t\t\t</ChannelNameSetAssignments>')
     lines.append('\t\t</CustomDeviceMode>')
 
-    # Channel name set with available channels
     lines.append(f'\t\t<ChannelNameSet Name="{escape(channel_set_name)}" >')
     lines.append('\t\t\t<AvailableForChannels>')
     for ch in range(1, 17):
         lines.append(f'\t\t\t\t<AvailableChannel Channel="{ch}" Available="true" />')
     lines.append('\t\t\t</AvailableForChannels>')
 
-    # Patch banks
     for bank in banks:
         bank_name = escape(bank["name"])
         lines.append(f'\t\t\t<PatchBank Name="{bank_name}" >')
-
-        # Bank select MIDI commands
         has_cc0 = bank.get("cc0") is not None
         has_cc32 = bank.get("cc32") is not None
         if has_cc0 or has_cc32:
@@ -75,13 +75,10 @@ def generate_midnam(manufacturer, model, banks, author="Articulation Mapper"):
                 lines.append(f'\t\t\t\t\t<ControlChange Control="32" '
                              f'Value="{bank["cc32"]}" />')
             lines.append('\t\t\t\t</MIDICommands>')
-
         lines.append(f'\t\t\t\t<UsesPatchNameList Name="{bank_name}" />')
         lines.append('\t\t\t</PatchBank>')
-
     lines.append('\t\t</ChannelNameSet>')
 
-    # Patch name lists (sorted alphabetically by bank name for consistency)
     for bank in sorted(banks, key=lambda b: b["name"].lower()):
         bank_name = escape(bank["name"])
         lines.append(f'\t\t<PatchNameList Name="{bank_name}" >')
@@ -119,7 +116,6 @@ def parse_midnam(xml_string):
     manufacturer = master.findtext('Manufacturer', '')
     model = master.findtext('Model', '')
 
-    # Build a map of PatchNameList contents
     patch_lists = {}
     for pnl in master.findall('.//PatchNameList'):
         pnl_name = pnl.get('Name', '')
@@ -132,7 +128,6 @@ def parse_midnam(xml_string):
             })
         patch_lists[pnl_name] = patches
 
-    # Build banks from PatchBank elements
     banks = []
     for pb in master.findall('.//PatchBank'):
         bank_name = pb.get('Name', '')
