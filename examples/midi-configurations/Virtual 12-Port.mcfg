@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>devices</key>
+	<array/>
+	<key>externalDevices</key>
+	<array>
+		<dict>
+			<key>apple.midi.audiomidisetup.widget.xPosition</key>
+			<integer>500</integer>
+			<key>apple.midi.audiomidisetup.widget.yPosition</key>
+			<integer>250</integer>
+			<key>can route</key>
+			<integer>0</integer>
+			<key>entities</key>
+			<array>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1335308919</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 1</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1356877659</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-2062464706</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>511039381</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 2</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-153387314</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-1701822189</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>614014102</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 3</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1737123822</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-81142629</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1308811600</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 4</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1071435836</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>430461435</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1578519792</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 5</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1591366301</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-999157562</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1185959616</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 6</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-761274128</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-2140321627</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-2121510159</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 7</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1452724713</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>1949666733</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>435715786</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 8</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1317665157</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-636543824</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1452325297</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 9</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1678044845</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-1705346230</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-854374452</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 10</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1468015861</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-100397588</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1603824882</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 11</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-2071946876</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-121713842</integer>
+				</dict>
+				<dict>
+					<key>destinations</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>1992714137</integer>
+						</dict>
+					</array>
+					<key>embedded</key>
+					<integer>0</integer>
+					<key>maxSysExSpeed</key>
+					<integer>3125</integer>
+					<key>name</key>
+					<string>Port 12</string>
+					<key>protocol</key>
+					<integer>1</integer>
+					<key>sources</key>
+					<array>
+						<dict>
+							<key>uniqueID</key>
+							<integer>-1167967639</integer>
+						</dict>
+					</array>
+					<key>uniqueID</key>
+					<integer>-1166331520</integer>
+				</dict>
+			</array>
+			<key>is drum machine</key>
+			<integer>0</integer>
+			<key>is effect unit</key>
+			<integer>0</integer>
+			<key>is mixer</key>
+			<integer>0</integer>
+			<key>is sampler</key>
+			<integer>0</integer>
+			<key>manufacturer</key>
+			<string>Virtual</string>
+			<key>max receive channels</key>
+			<integer>16</integer>
+			<key>max transmit channels</key>
+			<integer>16</integer>
+			<key>model</key>
+			<string>12-Port</string>
+			<key>name</key>
+			<string>Virtual 12-Port</string>
+			<key>pan disrupts stereo</key>
+			<integer>0</integer>
+			<key>receiveChannels</key>
+			<integer>65535</integer>
+			<key>receives MTC</key>
+			<integer>0</integer>
+			<key>receives bank select LSB</key>
+			<integer>1</integer>
+			<key>receives bank select MSB</key>
+			<integer>1</integer>
+			<key>receives clock</key>
+			<integer>0</integer>
+			<key>receives notes</key>
+			<integer>1</integer>
+			<key>receives program changes</key>
+			<integer>1</integer>
+			<key>supports General MIDI</key>
+			<integer>0</integer>
+			<key>supports MMC</key>
+			<integer>0</integer>
+			<key>transmitChannels</key>
+			<integer>65535</integer>
+			<key>transmits MTC</key>
+			<integer>0</integer>
+			<key>transmits bank select LSB</key>
+			<integer>1</integer>
+			<key>transmits bank select MSB</key>
+			<integer>1</integer>
+			<key>transmits clock</key>
+			<integer>0</integer>
+			<key>transmits notes</key>
+			<integer>1</integer>
+			<key>transmits program changes</key>
+			<integer>1</integer>
+			<key>uniqueID</key>
+			<integer>282810766</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
